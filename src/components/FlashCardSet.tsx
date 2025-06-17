@@ -14,6 +14,7 @@ export const FlashCardSet = ({ cards, title, description }) => {
     <div className="container">
       <h1>{title}</h1>
       <h3>{description}</h3>
+      <h3>Number of cards: {cards.length}</h3>
       <div className="flashcard">
         <FlashCard
           question={cards[currentIndex].question}
