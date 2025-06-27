@@ -1,4 +1,16 @@
-export const FlashCard = ({ question, answer, isFlipped, onClick }) => {
+type FlashCardProps = {
+  question: string;
+  answer: string;
+  isFlipped: boolean;
+  onClick: () => void;
+};
+
+export const FlashCard = ({
+  question,
+  answer,
+  isFlipped,
+  onClick,
+}: FlashCardProps) => {
   return (
     <div className={`card ${isFlipped ? "flipped" : ""}`} onClick={onClick}>
       <div className="card-inner">
